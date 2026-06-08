@@ -1,0 +1,10 @@
+﻿{
+  "name": "macula",
+  "version": "0.1.0",
+  "title": "Macula",
+  "author": "Thijnmens",
+  "description": "The planet Macula lies close to the center of the solar system. Due to special gasses in the air called \"Achronium\" everything appears monochrome. Unlock the technologies of this world to use color to your advantage.",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0", "space-age"],
+  "space_aggregate_size_warning_if_needed": false
+}
