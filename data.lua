@@ -1,4 +1,12 @@
 ﻿--[[
+------------------------------------------------------------------
+THE FACTORIO API DOCS
+
+https://lua-api.factorio.com/latest/prototypes.html
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+THIS IS YOUR BEST FRIEND!
+------------------------------------------------------------------
+
 This file is the entry point of your mod and is one of the few files that will be run by Factorio itself.
 You can put code directly in this file, but a better way to do things is to logically structure your project
 in different files and directories and then import these files here.
@@ -31,4 +39,11 @@ The directories are seperated by dots (.) and the file extension is ommited.
 Import order matters, if my planet needs the recipe to exist when running its code it should be imported BEFORE the planet.
 ]]
 
+-- Planets
 require("data.planet.macula")
+
+-- Space connections
+require('data.planet.connection.vulcanus-macula')
+
+-- Research
+require('data.research.planet-discovery-macula')
