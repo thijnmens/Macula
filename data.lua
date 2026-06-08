@@ -1,41 +1,34 @@
-﻿require("planet-gen")
+﻿--[[
+This file is the entry point of your mod and is one of the few files that will be run by Factorio itself.
+You can put code directly in this file, but a better way to do things is to logically structure your project
+in different files and directories and then import these files here.
 
-local macula = {
-    type = "planet",                                            -- Specify that this is a planet
-    name = "macula",                                            -- Name of the planet
-    icon = "__macula__/graphics/icons/macula.png",              -- Path to icon of the planet
-    icon_size = 64,                                             -- Size of the icon, 64 is the default
-    starmap_icon = "__macula__/graphics/icons/macula.png",      -- Path to the icon of the planet on the starmap
-    starmap_icon_size = 64,                                     -- Size of the icon on the starmap, 64 is the default
+!! IMPORTANT !!
+Any file that is NOT imported here will not run!
 
-    -- Navigation settings in Space Age, this influences space travel
-    gravity_pull = 10,                                          --
-    distance = 15,
-    orientation = 0.25,
-    magnitude = 1.0,
-    order = "z[custom]-a",
-    subgroup = "planets",
+Let's say we have a file structure like the following:
 
-    map_gen_settings = {
-        -- 1. Hook up your custom noise
-        property_expression_names = {
-            ["elevation"] = "advanced_fractal_elevation"
-        },
+--
+root
+├───data
+│   ├───planets
+│   │   └───planet.lua
+│   └───recipes
+│       └───recipe.lua
+└───graphics
+    └───icons
+--
 
-        -- 2. Define the only allowed tiles (Land & Water)
-        autoplace_settings = {
-            ["tile"] = {
-                settings = {
-                    ["water"] = {},
-                    ["grass-1"] = {}
-                }
-            }
-        },
+If i want to run both planet.lua and recipe.lua, i would import them like so:
 
-        -- 3. Explicitly leave these empty so nothing else spawns
-        autoplace_controls = {},
-        cliff_settings = { name = "cliff", cliff_elevation_interval = 0 }
-    }
-}
+--
+require("data.planets.planet")
+require("data.recipes.recipe")
+--
 
-data:extend({macula})
+The directories are seperated by dots (.) and the file extension is ommited.
+
+Import order matters, if my planet needs the recipe to exist when running its code it should be imported BEFORE the planet.
+]]
+
+require("data.planet.macula")
