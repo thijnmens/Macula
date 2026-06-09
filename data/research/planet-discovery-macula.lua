@@ -34,6 +34,11 @@
             type = "unlock-space-location",
             space_location = "macula",
             use_icon_overlay_constant = true
+        },
+        {
+            type = "give-item",
+            item = "light-refraction-crystal",
+            count = 200
         }
     }
 }

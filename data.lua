@@ -39,6 +39,12 @@ The directories are seperated by dots (.) and the file extension is ommited.
 Import order matters, if my planet needs the recipe to exist when running its code it should be imported BEFORE the planet.
 ]]
 
+-- Items
+require("data.item.light-refraction-crystal")
+
+-- Recipes
+--require("data.recipe.light-refraction-crystal")
+
 -- Planets
 require("data.planet.macula")
 
