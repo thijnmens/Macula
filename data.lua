@@ -39,6 +39,12 @@ The directories are seperated by dots (.) and the file extension is ommited.
 Import order matters, if my planet needs the recipe to exist when running its code it should be imported BEFORE the planet.
 ]]
 
+-- Terrain
+require("data.tile.achromatic-grass-1")
+require("data.tile.achromatic-grass-2")
+require("data.tile.achromatic-grass-3")
+require("data.tile.achromatic-grass-4")
+
 -- Items
 require("data.item.light-refraction-crystal")
 require("data.item.gas-extractor")

@@ -56,22 +56,21 @@ local macula = {
 
 
     map_gen_settings = {
-        -- 1. Hook up your custom noise
         property_expression_names = {
-            ["elevation"] = "advanced_fractal_elevation"
+            ["elevation"] = "mecula-elevation"
         },
 
-        -- 2. Define the only allowed tiles (Land & Water)
         autoplace_settings = {
             ["tile"] = {
                 settings = {
-                    ["water"] = {},
-                    ["grass-1"] = {}
+                    ["achromatic-grass-1"] = {},
+                    ["achromatic-grass-2"] = {},
+                    ["achromatic-grass-3"] = {},
+                    ["achromatic-grass-4"] = {}
                 }
             }
         },
 
-        -- 3. Explicitly leave these empty so nothing else spawns
         autoplace_controls = {},
         cliff_settings = { name = "cliff", cliff_elevation_interval = 0 }
     }
