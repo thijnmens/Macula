@@ -48,9 +48,9 @@ local macula = {
 
 
     -- UI settings
-    icon = "__macula__/graphics/icons/macula.png",              -- Path to icon of the planet
+    icon = "__macula__/graphics/icon/macula.png",              -- Path to icon of the planet
     icon_size = 64,                                             -- Size of the icon, 64 is the default
-    starmap_icon = "__macula__/graphics/icons/macula.png",      -- Path to the icon of the planet on the starmap
+    starmap_icon = "__macula__/graphics/icon/macula.png",      -- Path to the icon of the planet on the starmap
     starmap_icon_size = 64,                                     -- Size of the icon on the starmap, 64 is the default
     starmap_icon_orientation = 0,                               -- Angle in relation to the planet where the top of the sprite points towards
 

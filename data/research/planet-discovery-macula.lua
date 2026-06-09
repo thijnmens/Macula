@@ -1,7 +1,7 @@
 ﻿local planet_discovery_macula = {
     type = "technology",
     name = "planet-discovery-macula",
-    icon = "__macula__/graphics/icons/macula.png",
+    icon = "__macula__/graphics/icon/macula.png",
     icon_size = 64,
 
     upgrade = false,
@@ -39,6 +39,14 @@
             type = "give-item",
             item = "light-refraction-crystal",
             count = 200
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "achronium-recipe"
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "gas-extractor-recipe"
         }
     }
 }

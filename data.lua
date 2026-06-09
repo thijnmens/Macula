@@ -24,7 +24,7 @@ root
 │   └───recipes
 │       └───recipe.lua
 └───graphics
-    └───icons
+    └───icon
 --
 
 If i want to run both planet.lua and recipe.lua, i would import them like so:
@@ -41,9 +41,14 @@ Import order matters, if my planet needs the recipe to exist when running its co
 
 -- Items
 require("data.item.light-refraction-crystal")
+require("data.item.gas-extractor")
+
+-- Machines
+require("data.machine.gas-extractor-machine")
 
 -- Recipes
---require("data.recipe.light-refraction-crystal")
+require("data.recipe.achronium-recipe")
+require("data.recipe.gas-extractor-recipe")
 
 -- Planets
 require("data.planet.macula")
