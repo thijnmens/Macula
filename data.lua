@@ -12,31 +12,37 @@ You can put code directly in this file, but a better way to do things is to logi
 in different files and directories and then import these files here.
 
 !! IMPORTANT !!
-Any file that is NOT imported here will not run!
 
-Let's say we have a file structure like the following:
+    Any file that is NOT imported here will not run!
 
---
-root
-├───data
-│   ├───planets
-│   │   └───planet.lua
-│   └───recipes
-│       └───recipe.lua
-└───graphics
-    └───icon
---
+    Let's say we have a file structure like the following:
 
-If i want to run both planet.lua and recipe.lua, i would import them like so:
+    --
+    root
+    ├───data
+    │   ├───planets
+    │   │   └───planet.lua
+    │   └───recipes
+    │       └───recipe.lua
+    └───graphics
+        └───icon
+    --
 
---
-require("data.planets.planet")
-require("data.recipes.recipe")
---
+    If i want to run both planet.lua and recipe.lua, i would import them like so:
+
+    --
+    require("data.planets.planet")
+    require("data.recipes.recipe")
+    --
 
 The directories are seperated by dots (.) and the file extension is ommited.
 
 Import order matters, if my planet needs the recipe to exist when running its code it should be imported BEFORE the planet.
+
+Another important best practise is to follow the factorio naming scheme. All your prototypes should be in
+a folder called "portotypes", sprites and other imagery should be in "graphics" and sound effects in "sound"
+for example. I would recommend checking your factorio data folder to get a good understanding of the file naming
+before starting on your mod.
 ]]
 
 -- Terrain

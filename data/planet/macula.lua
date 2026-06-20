@@ -48,19 +48,19 @@ local macula = {
 
 
     -- UI settings
-    icon = "__macula__/graphics/icon/macula.png",              -- Path to icon of the planet
+    icon = "__macula__/graphics/icon/macula.png",               -- Path to icon of the planet
     icon_size = 64,                                             -- Size of the icon, 64 is the default
-    starmap_icon = "__macula__/graphics/icon/macula.png",      -- Path to the icon of the planet on the starmap
+    starmap_icon = "__macula__/graphics/icon/macula.png",       -- Path to the icon of the planet on the starmap
     starmap_icon_size = 64,                                     -- Size of the icon on the starmap, 64 is the default
     starmap_icon_orientation = 0,                               -- Angle in relation to the planet where the top of the sprite points towards
 
 
-    map_gen_settings = {
-        property_expression_names = {
+    map_gen_settings = {                                        -- Generation settings for the planet terrain
+        property_expression_names = {                           -- Object to map property names to the name of a noise expression
             ["elevation"] = "mecula-elevation"
         },
 
-        autoplace_settings = {
+        autoplace_settings = {                                  -- Collection of entities, tiles and/or decorative ID's to automatically generate based on the noise expressions
             ["tile"] = {
                 settings = {
                     ["achromatic-grass-1"] = {},
@@ -71,8 +71,11 @@ local macula = {
             }
         },
 
-        autoplace_controls = {},
-        cliff_settings = { name = "cliff", cliff_elevation_interval = 0 }
+        autoplace_controls = {},                                -- Allows you to configure under what conditions auto-place can place certain things
+        cliff_settings = {                                      -- Configures the settins for clifs
+            name = "cliff",
+            cliff_elevation_interval = 0
+        }
     }
 }
 

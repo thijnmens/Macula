@@ -1,0 +1,9 @@
+I created a mod for the game Factorio. The mod is about a planet near the edge of the solar system with a unique gas in the air called "Achronium Gas".
+This special gas has turned the planet grayscale. You can capture the gas into canisters for later processing. The goal is to launch a rocket to get off the planet.
+
+The intend with this mod is to make a really simple mod that is super well documented code-wise in a way that people could download this mod and create their own based on it.
+Everything is explained in the code with large multi-line comments talking about best practises and how certain things work (like how rotation is a float from 0 to 1).
+
+The code is in GitHub, I wanted to upload it to GitLab like we should but we do not have access to upload it to the linked group, so instead i'll keep it on GitHub where it was already posted anyways.
+
+https://github.com/thijnmens/Macula/
